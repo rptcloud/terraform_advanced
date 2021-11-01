@@ -62,6 +62,8 @@ terraform init
 terraform apply
 ```
 
+> Note: If this `apply` resulted in a a `No Changes` then the state list command below will not show any entries, so you can move to Task 3.
+
 ```bash
 terraform state list
 module.server.data.aws_ami.ubuntu_18_04
