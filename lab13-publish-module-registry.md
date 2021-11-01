@@ -87,6 +87,8 @@ git push origin v0.0.1
 
 Update the `source` and `version` arguments on the module declaration in your `main.tf`
 
+> Note: Be sure to use the source URL for your private module organization.
+
 ```hcl
 module "server" {
   source                 = "app.terraform.io/example-org-5a4eda/server/aws"
