@@ -63,7 +63,7 @@ Now that you've migrated your state file, let's view it in Terraform Cloud to ve
 - Navigate to your new workspace
 - In your workspace, click on the `States` tab
 - You should see something along the lines of this in the `States` tab. This indicates that your state file was successfully migrated, and from now on, you can check here after new applies for new versions of your state file.
-  - ![remote state file](../img/remoteState.png)
+  - ![remote state file](./img/remoteState.png)
 
 ## Task 3: Manually delete local state file
 
