@@ -181,7 +181,7 @@ View the most current terraform state file on the `States` tab within Terraform 
   "lineage": "67c71c6f-af25-b300-2ea7-6d0f4b226b7b",
   "outputs": {
     "cost_code": {
-      "value": "10-23",
+      "value": "1-3-4",
       "type": "string"
     },
     "department": {
