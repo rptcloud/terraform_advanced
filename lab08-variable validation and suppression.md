@@ -117,7 +117,7 @@ output "my_number" {
 
 ```hcl
 department = "ABC"
-cost_code  = "10-23"
+cost_code  = "1-3-4"
 ```
 
 Execute a `terraform apply` with the variables in the `terraform.auto.tfvars`.
@@ -159,7 +159,7 @@ terraform apply
 ```bash
 Outputs:
 
-cost_code = "10-23"
+cost_code = "1-3-4"
 department = "ABC"
 my_number = "867-5309"
 phone_number = <sensitive>
