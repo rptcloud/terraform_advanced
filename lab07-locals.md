@@ -157,7 +157,6 @@ Now we can update the `aws_instance` resource block within your `server.tf` to c
 ...
 
 resource "aws_instance" "web" {
-  count                  = var.num_webs
   ami                    = local.ami
   instance_type          = "t2.micro"
 
