@@ -20,7 +20,7 @@ The Terraform Cloud module configuration designer supports a producer/consumer p
 
 Start by either clicking the "Open in Configuration Designer" button under the right hand code snippet, or go back to the organization dashboard and click the "+ Design Configuration" button.
 
-![Module Design Configuration](img/module-design-configuration.png "Module Design Configuration")
+![Module Design Configuration](./img/module-design-configuration.png "Module Design Configuration")
 
 In either case, you'll see a screen with a list of modules. Click the "Add Module" button on the `animal` module.
 
@@ -28,7 +28,7 @@ In either case, you'll see a screen with a list of modules. Click the "Add Modul
 
 Click the green "Next" button to proceed to the configuration screen. You'll see a list of variables, a description of each, and an input field where you can type a value for the variable.
 
-![Module Variables](img/module-variables.png "Module Variables")
+![Module Variables](./img/module-variables.png "Module Variables")
 
 Type any name into the name field, such as "web".
 
