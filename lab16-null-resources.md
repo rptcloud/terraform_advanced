@@ -48,7 +48,7 @@ terraform {
 }
 ```
 
-> Note: Replace with your TFC Organization above and your intials in the `name` argument below
+> Note: Replace with your `organization` above and your intials in the `name` argument below where `###` are listed
 
 `sshkey.tf`
 
@@ -76,7 +76,7 @@ module "keypair" {
   source  = "mitchellh/dynamic-keys/aws"
   version = "2.0.0"
   path    = "${path.root}/keys"
-  name    = "appkey-ghm"
+  name    = "appkey-###"
 }
 
 output "key_name" {
@@ -95,6 +95,14 @@ terraform apply
 ```
 
 > Note: This may error on not finding AWS credentials which you will have to set in the `ssh-keys` workspace variables.
+
+Update the `aws_access_key`, `aws_secret_key` and `region` variables within the `ssh-keys` workspace.
+
+Once update rerun an apply.
+
+```shell
+terraform apply
+```
 
 ## Task 2: Update our Module to use our shared infrastructure key from the `ssh-keys` workspace
 
