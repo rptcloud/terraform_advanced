@@ -187,6 +187,15 @@ We are leveraging a technique to query shared remote state from another workspac
 ![Shared State Not Allowed](img/remote_state_disallowed.png)
 
 
-Go to the `shared-keys` workspace under the `Settings` > `General` and enable our `webserver-aws-dev` workspace to read our ssh keys output.
+Go to the `ssh-keys` workspace under the `Settings` > `General` and enable our `webserver-aws-dev` workspace to read our ssh keys output.
 
 ![Shared State Allowed](img/remote_state_allowed.png)
+
+
+Go back to the `web-server-dev` workspace and perform an `Actions > Start New Plan`
+
+![Deploy_App](img/null_resource_apply.png)
+
+Confirm and Apply the workspace and then browse to see you the new deployed application.
+
+![Web_App](img/web_app.png)
