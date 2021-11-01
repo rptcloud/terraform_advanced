@@ -38,7 +38,7 @@ In your local repository copy the contents of the `server` folder to the `terraf
 
 ```
 cd /workstation/terraform
-cp -r ./server/* ./terraform-aws-server
+sudo cp -r ./server/* ./terraform-aws-server
 ```
 
 Commit the changes in GitHub.
