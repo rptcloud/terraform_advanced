@@ -16,7 +16,7 @@ This lab demonstrates how to store variables in Terraform Cloud.
 Now that we have our state stored in Terraform Cloud in our workspace, we will take the next logical step and store our sensitive variables into TFC as well.
 
 - In this step, we will be taking all of that variables and values that are stored locally in the `terraform.tfvars` file and migrating them up to Terraform Cloud.
-- The first thing you will need to do is navigate to your Terraform Cloud `Workstation` in the UI.
+- The first thing you will need to do is navigate to your Terraform Cloud `webserver-aws-dev` in the UI.
 - Once there, navigate to the `Variables` tab.
   - ![navigate to variables tab](./img/navigateVariables.png)
 - In the `Variables` tab, you can add variables related to the state file that was previously migrated.
