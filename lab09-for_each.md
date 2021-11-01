@@ -172,12 +172,12 @@ When using Terraform's `for-each` our output blocks need to be updated to utiliz
 ```hcl
 output "public_ip" {
   description = "Public IP of the Servers"
-  value = { for p in sort(keys(var.servers)) : p => module.server[p].public_ip }
+  value = { for p in sort(keys(local.servers)) : p => module.server[p].public_ip }
 }
 
 output "public_dns" {
   description = "Public DNS names of the Servers"
-  value = { for p in sort(keys(var.servers)) : p => module.server[p].public_dns }
+  value = { for p in sort(keys(local.servers)) : p => module.server[p].public_dns }
 }
 ```
 
