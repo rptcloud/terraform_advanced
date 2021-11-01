@@ -10,7 +10,7 @@ We may want to validate and possibly suppress and sensitive information defined 
 
 ## Task 1: Valdiate variables in the Server Module
 
-Update the `server_os` variable within the server module's `variables.tf` configuration file to include a validation block to check for approved operatins system types:
+Update the `server_os` variable within the server module's `variables.tf` configuration file to include a validation block to check for approved operating system types:
 
 ```hcl
 variable "server_os" {
@@ -27,7 +27,7 @@ variable "server_os" {
 
 Update the `server_os` variable in Terraform Cloud to list an approved server operating system and perform a `terraform plan`:
 
-![Approved Server OS](/course/img/server_os_approved.png)
+![Approved Server OS](./img/server_os_approved.png)
 
 
 ```bash
@@ -36,7 +36,7 @@ terraform plan
 
 Update the `server_os` variable in Terraform Cloud to list an approved server operating system and perform a `terraform plan`: 
 
-![Approved Server OS](/course/img/server_os_unapproved.png)
+![Approved Server OS](./img/server_os_unapproved.png)
 
 ```bash
 terraform plan
