@@ -12,7 +12,7 @@ DevOps, Security, and Operations
 
 ### Prerequisites:
 
-Completion of ![Terraform Fundamentals](https://riverpointtechnology.com/training-course/hashicorp-terraform-training-bundle-2) or work experience with Terraform.
+Completion of [Terraform Fundamentals](https://riverpointtechnology.com/training-course/hashicorp-terraform-training-bundle-2) or work experience with Terraform.
 
 ### Delivery Method:
 
