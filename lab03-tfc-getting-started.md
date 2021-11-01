@@ -1,6 +1,6 @@
 # Lab: Terraform Cloud - Sign Up and Getting Started
 
-In this lab you will utilize the [Terraform Cloud Remote Backend](https://app.terraform.io/signup?utm_source=banner&utm_campaign=intro_tf_cloud_remote).
+In this lab you will sign up and get started with Terraform Cloud utilize the [Terraform Cloud](https://app.terraform.io/).
 
 Duration: 20 minutes
 
