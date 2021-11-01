@@ -22,7 +22,7 @@ Start by either clicking the "Open in Configuration Designer" button under the r
 
 ![Module Design Configuration](img/module-design-configuration.png "Module Design Configuration")
 
-In either case, you'll see a screen with a list of modules. Click the "Add Module" button on the `animal` module.
+In either case, you'll see a screen with a list of modules. Click the "Add Module" button on the `server` module.
 
 ## Task 3: Configure variables
 
