@@ -88,7 +88,7 @@ Next, we will be testing to make sure that our variables in TFC are working corr
 - Simply click on the `***` button to the right of your variables, and then select the `Edit` option
 - Change the value of your `identity` variable and save to apply a new name to your server.
 - Run a `terraform apply` locally in your code editor.
-- When this is ran locally, you should see that Terraform is looking at the variable in TFC, and it will update your server tags with the `indenity` value.
+- When this is ran locally, you should see that Terraform is looking at the variable in TFC, and it will update your server tags with the `indentity` value.
 
 ## Task 4: Run an apply remotely
 
