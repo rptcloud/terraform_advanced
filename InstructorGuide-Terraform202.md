@@ -64,9 +64,9 @@ Each course delivery is different, so this is not a hard-fixed schedule. Use thi
 | 11:45 - 12:00 PM | Code Review                              | 15 min.  |
 | 12:00 - 1:00 PM  | Lunch Break                              | 60 min.  |
 | 1:00 - 2:15 PM   | Code Organization / Workspace Automation | 75 min.  |
-| 2:15 - 3:00 PM   | Automated Testing                        | 45 min.  |
+| 2:15 - 3:00 PM   | API Driven Workflows                     | 45 min.  |
 | 3:00 - 3:15 PM   | Break                                    | 15 min.  |
-| 3:15 - 4:00 PM   | API Driven Workflows                     | 45 min.  |
+| 3:15 - 4:00 PM   | Automated Testing                        | 45 min.  |
 | 4:00 - 4:30 PM   | Sentinel – Policies and Policy Sets      | 30 min.  |
 | 4:30 - 5:00 PM   | Sentinel – Policy Development            | 45 min.  |
 
