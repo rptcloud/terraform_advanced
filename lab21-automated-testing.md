@@ -22,13 +22,15 @@ Install Go on your training workstation
 ```bash
  wget -c https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
 export PATH=$PATH:/usr/local/go/bin
+sudo apt install golang-go
+
 ```
 
 ```bash
 go version
 ```
 
-Inside of the `/workstation/terraform/` directory, add the following Terraform configuration files from [here](https://github.com/rptcloud/terraform_advanced_training/tree/master/lab_solutions_09). Make sure they follow that exact structure.
+Inside of the `/workstation/terraform/` directory, add the following Terraform configuration files from [here](https://github.com/rptcloud/terraform_training/tree/master/lab_solutions_09). Make sure they follow that exact structure.
 
 In the `/workstation/terraform/` directory, ensure you have a `terraform.tfvars` file and it has the following contents:
 
