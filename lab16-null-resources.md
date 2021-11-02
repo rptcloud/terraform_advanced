@@ -106,7 +106,7 @@ Once update rerun an apply.
 terraform apply
 ```
 
-## Task 2: Update our Module to use our shared infrastructure key from the `ssh-keys` workspace
+## Task 3: Update our Module to use our shared infrastructure key from the `ssh-keys` workspace
 
 Update the `main.tf` within the `app-build` directory to use our shared infrastructure key from the `ssh-keys` workspace
 
