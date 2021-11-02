@@ -47,7 +47,7 @@ In the `/workstation/terraform/testing_lab/` directory, copy your `terraform.tfv
  vpc_security_group_ids = ["(your sg)"]
 ```
 
-If these values are commented out (they are by default), make sure you uncomment them as our Terraform configuration will be using them.
+If these values are commented out (they are by default), make sure you uncomment them as our Terraform configuration will be using them.  Also copy the `assets` folder containing your web application into the `testing_lab` directory.
 
 Create a new folder within the `/workstation/terraform/testing_lab/server` folder called `test`. This will house your test for the server module.
 
