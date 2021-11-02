@@ -50,132 +50,54 @@ Create the following policy:
 
 __Policy Name:__ RequireMandatoryTags
 
-__Description:__ Policy Enforcing Mandatory Tags
+__Description:__ Policy Enforcing Mandatory Tags and Allowed Sizes
 
 __Policy Enforcement:__ advisory (logging only)
 
 __Policy Code:__
 
 ```hcl
-# This policy uses the Sentinel tfplan import to require that all EC2 instances
-# have all mandatory tags.
+   
+# Imports mock data
+import "tfplan/v2" as tfplan
 
-# Note that the comparison is case-sensitive since AWS tags are case-sensitive.
-
-##### Imports #####
-
-import "tfplan"
-import "strings"
-import "types"
-
-##### Functions #####
-
-# Find all resources of a specific type from all modules using the tfplan import
-find_resources_from_plan = func(type) {
-
-  resources = {}
-
-  # Iterate over all modules in the tfplan import
-  for tfplan.module_paths as path {
-    # Iterate over the named resources of desired type in the module
-    for tfplan.module(path).resources[type] else {} as name, instances {
-      # Iterate over resource instances
-      for instances as index, r {
-
-        # Get the address of the instance
-        if length(path) == 0 {
-          # root module
-          address = type + "." + name + "[" + string(index) + "]"
-        } else {
-          # non-root module
-          address = "module." + strings.join(path, ".module.") + "." +
-                    type + "." + name + "[" + string(index) + "]"
-        }
-
-        # Add the instance to resources map, setting the key to the address
-        resources[address] = r
-      }
-    }
-  }
-
-  return resources
+# Get all AWS instances from all modules
+ec2_instances = filter tfplan.resource_changes as _, rc {
+    rc.type is "aws_instance" and
+        (rc.change.actions contains "create" or rc.change.actions is ["update"])
 }
 
-# Validate that all instances of specified type have a specified top-level
-# attribute that contains all members of a given list
-validate_attribute_contains_list = func(type, attribute, required_values) {
-
-  validated = true
-
-  # Get all resource instances of the specified type
-  resource_instances = find_resources_from_plan(type)
-
-  # Loop through the resource instances
-  for resource_instances as address, r {
-
-    # Skip resource instances that are being destroyed
-    # to avoid unnecessary policy violations.
-    # Used to be: if length(r.diff) == 0
-    if r.destroy and not r.requires_new {
-      print("Skipping resource", address, "that is being destroyed.")
-      continue
-    }
-
-    # Determine if the attribute is computed
-    # We check "attribute.%" and "attribute.#" because an
-    # attribute of type map or list won't show up in the diff
-    if (r.diff[attribute + ".%"].computed else false) or
-       (r.diff[attribute + ".#"].computed else false) {
-      print("Resource", address, "has attribute", attribute,
-            "that is computed.")
-      # If you want computed values to cause the policy to fail,
-      # uncomment the next line.
-      # validated = false
-    } else {
-      # Validate that the attribute is a list or a map
-      # but first check if r.applied[attribute] exists
-      if r.applied[attribute] else null is not null and
-         (types.type_of(r.applied[attribute]) is "list" or
-          types.type_of(r.applied[attribute]) is "map") {
-
-        # Evaluate each member of required_values list
-        for required_values as rv {
-          if r.applied[attribute] not contains rv {
-            print("Resource", address, "has attribute", attribute,
-                  "that is missing required value", rv, "from the list:",
-                  required_values)
-            validated = false
-          } // end rv
-        } // end required_values
-
-      } else {
-        print("Resource", address, "is missing attribute", attribute,
-              "or it is not a list or a map")
-        validated = false
-      } // end check that attribute is list or map
-
-    } // end computed check
-  } // end resource instances
-
-  return validated
-}
-
-### List of mandatory tags ###
+# Mandatory Instance Tags
 mandatory_tags = [
-  "Name",
-  "ttl",
-  "owner",
+    "Name",
 ]
 
-### Rules ###
+# Allowed Types
+allowed_types = [
+    "t2.micro",
+    "t2.small",
+    "t2.medium",
+]
 
-# Call the validation function
-tags_validated = validate_attribute_contains_list("aws_instance",
-                 "tags", mandatory_tags)
+# Rule to enforce "Name" tag on all instances
+mandatory_instance_tags = rule {
+    all ec2_instances as _, instance {
+        all mandatory_tags as mt {
+            instance.change.after.tags contains mt
+        }
+    }
+}
 
-#Main rule
+# Rule to restrict instance types
+instance_type_allowed = rule {
+    all ec2_instances as _, instance {
+        instance.change.after.instance_type in allowed_types
+    }
+}
+
+# Main rule that requires other rules to be true
 main = rule {
-  tags_validated
+    (instance_type_allowed and mandatory_instance_tags) else true
 }
 ```
 
