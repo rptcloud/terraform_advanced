@@ -23,16 +23,19 @@ Install Go on your training workstation
  wget -c https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
 export PATH=$PATH:/usr/local/go/bin
 sudo apt install golang-go
-
 ```
 
 ```bash
 go version
 ```
 
-Inside of the `/workstation/terraform/` directory, add the following Terraform configuration files from [here](https://github.com/rptcloud/terraform_training/tree/master/lab_solutions_09). Make sure they follow that exact structure.
+Inside of the `/workstation/terraform/` directory create a `testing_lab` folder add the following Terraform configuration files from [here](https://github.com/rptcloud/terraform_training/tree/master/lab_solutions_09). Make sure they follow that exact structure.
 
-In the `/workstation/terraform/` directory, ensure you have a `terraform.tfvars` file and it has the following contents:
+```shell
+mkdir -p /workstation/terraform/testing_lab && cd $_
+```
+
+In the `/workstation/terraform/testing_lab/` directory, copy your `terraform.tfvars` file and it has the following contents:
 
 ```hcl
  access_key        = "(your AWS access key id)"
@@ -46,7 +49,7 @@ In the `/workstation/terraform/` directory, ensure you have a `terraform.tfvars`
 
 If these values are commented out (they are by default), make sure you uncomment them as our Terraform configuration will be using them.
 
-Create a new folder within the `server` folder called `test`. This will house your test for the server module.
+Create a new folder within the `/workstation/terraform/testing_lab/server` folder called `test`. This will house your test for the server module.
 
 In the `test` folder, create a file ending in server_test.go and run tests with the go test command. E.g., go test server_test.go.
 
