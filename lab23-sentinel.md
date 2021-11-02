@@ -1,4 +1,4 @@
-# Lab: Terraform Enterprise - Sentinel Policy Use
+# Lab: Terraform Policy as Code - Sentinel Policy Use
 
 ## Expected Outcome
 
@@ -185,7 +185,7 @@ __Policy Sets__: Select the Policy Set we just created "GlobalWorkspacePolicies"
 
 > Note: be sure to discard any existing plans.
 
-Navigate to your "server" workspace and queue a plan.
+Navigate to your "webserver-aws-dev" workspace and queue a plan.
 
 ### Review the Plan
 
