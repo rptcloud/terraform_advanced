@@ -59,12 +59,7 @@ Export a TFC api token as `export TFE_TOKEN=<TOKEN-VALUE>` so that this terrafor
 
 ```bash
 terraform init
-terraform apply
-var.organization
-  Enter a value: RPTData # Replace with your Organization Name
-​
-var.workspace_name
-  Enter a value: webserver-aws-dev # Replace with your Sandbox Workspace Name
+terraform apply -var "organization=YOUR-ORG" -var "workspace_name=webserver-aws-dev"
 ```
 
 ​
@@ -173,15 +168,10 @@ output "workspace_new_terraform_version" {
 ​
 
 ```bash
-terraform apply
-var.organization
-  Enter a value: RPTData # Replace with your Organization Name
-​
-var.workspace_name
-  Enter a value: webserver-aws-dev # Replace with your Sandbox Workspace Name
+terraform apply terraform apply -var "organization=YOUR-ORG" -var "workspace_name=webserver-aws-dev"
 ​
 var.workspace_name_new
-  Enter a value: webserver-aws-stage # Replace with your Prod Workspace Name
+  Enter a value: webserver-aws-stage # Create a Stage Workspace Name
 ```
 
 ​
@@ -242,15 +232,10 @@ Run a `terraform apply`
 ​
 
 ```bash
-terraform apply
-var.organization
-  Enter a value: RPTData # Replace with your Organization Name
-​
-var.workspace_name
-  Enter a value: webserver-aws-dev # Replace with your Sandbox Workspace Name
-​
+terraform apply terraform apply -var "organization=YOUR-ORG" -var "workspace_name=webserver-aws-dev"
+
 var.workspace_name_new
-  Enter a value: webserver-aws-stage # Replace with your Prod Workspace Name
+  Enter a value: webserver-aws-stage # Replace with your Stage Workspace Name
 ```
 
 ​
@@ -281,15 +266,10 @@ Run a `terraform apply`
 ​
 
 ```bash
-terraform apply
-var.organization
-  Enter a value: RPTData # Replace with your Organization Name
-​
-var.workspace_name
-  Enter a value: webserver-aws-dev # Replace with your Sandbox Workspace Name
+terraform apply terraform apply -var "organization=YOUR-ORG" -var "workspace_name=webserver-aws-dev"
 ​
 var.workspace_name_new
-  Enter a value: webserver-aws-stage # Replace with your Prod Workspace Name
+  Enter a value: webserver-aws-stage # Replace with your Stage Workspace Name
 ```
 
 ​
@@ -385,6 +365,10 @@ resource "tfe_workspace" "managed" {
 
 Run a `terraform apply`
 
+```
+terraform apply terraform apply -var "organization=YOUR-ORG" -var "workspace_name=webserver-aws-dev"
+```
+
 ## Task 5: Automate Team Access across Workspaces
 
 ​
@@ -419,6 +403,10 @@ resource "tfe_team_access" "classmates-all" {
 
 Run a `terraform apply`
 
+
+```shell
+terraform apply terraform apply -var "organization=YOUR-ORG" -var "workspace_name=webserver-aws-dev"
+```
 ​
 
 ## Best Practices - Planning and Organizing Terraform Workspaces
