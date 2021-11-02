@@ -124,7 +124,7 @@ Workspaces are how Terraform Cloud organizes infrastructure. Let's create one wi
 ​
 
 ```bash
-provider "tfe" {
+provider "tfe" {}
 
 variable "workspace_name" {
   type = string
