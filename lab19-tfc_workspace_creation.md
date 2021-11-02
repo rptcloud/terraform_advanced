@@ -1,10 +1,8 @@
 # Lab: Automate TFC/TFE Workspace Creation
 
-​
-Duration: 15 minutes
-​
 We can Provision Terraform Cloud or Terraform Enterprise - with Terraform! The Terraform provider allows for the management of organizations, workspaces, teams, variables, run triggers, policy sets, and more.
 ​
+​Duration: 15 minutes
 
 - Task 1: Read information from TFC/TFE with the Terraform tfe provider
 - Task 2: Create a TFC/TFE Workspace using the tfe provider

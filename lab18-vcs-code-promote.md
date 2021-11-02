@@ -8,6 +8,8 @@ GitOps is an operational framework that takes DevOps best practices that we use 
 
 In this challenge, we will utilize the benefits the VCS connected workflow to promote code from a `development` branch into our `main` branch of the `app-build` code repository.
 
+Duration: 30 minutes
+
 - Task 1: Create a `development` branch in your `app-build` code repository.
 - Task 2: Update your `web-server-dev` workspace to point to your `development` branch.
 - Task 3: Perform and update on your development branch to validate

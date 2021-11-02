@@ -1,8 +1,8 @@
 # Lab : TFC Teams
 
-Duration: 20 minutes
-
 This lab demonstrates collaboration for users and teams within an organization to share and update infrastructure deployments.
+
+Duration: 15 minutes
 
 - Task 1: Create a new TFC Team
 - Task 2: Invite a user to join the team

@@ -1,8 +1,8 @@
 # Lab : Null Resources
 
-Duration: 20 minutes
-
 This lab demonstrates the use of the `null_resource`. Instances of `null_resource` are treated like normal resources, but they don't do anything. Like with any other resource, you can configure provisioners and connection details on a null_resource. You can also use its triggers argument and any meta-arguments to control exactly where in the dependency graph its provisioners will run.
+
+Duration: 20 minutes
 
 - Task 1: Create a AWS Instance using Terraform
 - Task 2: Create SSH Key Pair for AWS
@@ -97,6 +97,8 @@ terraform apply
 > Note: This may error on not finding AWS credentials which you will have to set in the `ssh-keys` workspace variables.
 
 Update the `aws_access_key`, `aws_secret_key` and `region` variables within the `ssh-keys` workspace.
+
+![SSH Key Variables](img/ssh_keys_variables.png)
 
 Once update rerun an apply.
 
