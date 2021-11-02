@@ -66,17 +66,15 @@ Each course delivery is different, so this is not a hard-fixed schedule. Use thi
 | 10:35 - 10:50 AM | Break                              | 15 min.  |
 | 10:50 - 11:15 AM | Secure Variables                   | 25 min.  |
 | 11:15 - 12:00 PM | Data Blocks and Conditions         | 45 min.  |
-| 1:00 - 1:30 PM   | Locals, Validation and Suppression | 30 min.  |
 | 12:00 - 1:00 PM  | Lunch Break                        | 60 min.  |
-| 1:30 - 2:00 PM   | For Each Blocks                    | 30 min.  |
-| 2:00 - 2:20 PM   | Dynamic Blocks                     | 20 min.  |
-| 2:20 - 3:10 PM   | Code Organization                  | 50 min.  |
-| 3:10 - 3:30 PM   | Private Module Registry            | 20 min.  |
-| 3:30 - 4:00 PM   | Version Control Integration        | 30 min.  |
-| 2:50 - 3:25 PM   | Publish Private Module             | 35 min.  |
-| 3:25 - 3:40 PM   | Break                              | 15 min.  |
-| 3:40 - 4:15 PM   | VCS Workflow                       | 40 min.  |
-| 4:15 - 4:45 PM   | Null Resources                     | 30 min.  |
+| 1:00 - 1:45 PM   | Locals, Validation and Suppression | 45 min.  |
+| 1:45 - 2:15 PM   | For Each Blocks                    | 30 min.  |
+| 2:15 - 2:45 PM   | Dynamic Blocks                     | 30 min.  |
+| 2:45 - 3:15 PM   | Private Module Registry            | 30 min.  |
+| 3:15 - 3:30 PM   | Break                              | 15 min.  |
+| 3:30 - 3:45 PM   | Version Control Integration        | 30 min.  |
+| 3:45 - 4:15 PM   | Publish Private Module             | 35 min.  |
+| 4:14 - 4:45 PM   | VCS Workflow                       | 40 min.  |
 | 4:45 - 5:00PM    | Course Wrap-up                     | 15 min.  |
 
 Students will receive access to their own personal Linux-based lab environment for the class.
