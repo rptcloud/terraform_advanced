@@ -114,7 +114,7 @@ func TestEnvironment(t *testing.T) {
 We will use Terratest to execute terraform to deploy our infrastructure into AWS.
 
 ```bash
-cd ./server/test/
+cd ./workstation/terraform/testing_lab/server/test/
 test_file="$(ls *test.go)"
 go mod init "${test_file%.*}"
 go mod tidy
