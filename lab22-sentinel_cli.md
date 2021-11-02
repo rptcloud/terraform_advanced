@@ -116,7 +116,16 @@ Note that adding -trace causes the sentinel test command to print output from an
 
 Now, we will test the policy with the "sentinel test" command using test cases. For any policy, the test cases must be placed under the directory test/<policy> under the directory containing the policy where <policy> is the name of the policy without the ".sentinel" extension.
 
-`/test/require-even-number`
+Create a `/test/require-even-number` folder and place both a pass and fail set of tests in the directory.
+  
+```shell
+.
+├── require-even-number.sentinel
+└── test
+    └── require-even-number
+        ├── fail.hcl
+        └── pass.hcl
+```
 
 `fail.hcl`
 
