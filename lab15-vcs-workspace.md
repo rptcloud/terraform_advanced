@@ -1,7 +1,5 @@
 # Lab: Terraform Enterprise - Workspaces
 
-## Expected Outcome
-
 In this challenge, you will create a repository, and link it to a TFC workspace via a VCS connection.
 
 Duration: 20 minutes
