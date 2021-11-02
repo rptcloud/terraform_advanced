@@ -96,7 +96,7 @@ terraform apply
 
 > Note: This may error on not finding AWS credentials which you will have to set in the `ssh-keys` workspace variables.
 
-Update the `aws_access_key`, `aws_secret_key` and `region` variables within the `ssh-keys` workspace.
+Update the `access_key`, `secret_key` and `region` variables within the `ssh-keys` workspace.
 
 ![SSH Key Variables](img/ssh_keys_variables.png)
 
