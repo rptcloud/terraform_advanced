@@ -16,6 +16,17 @@ The Sentinel Command Line Interface (CLI) allows you to apply and test Sentinel 
 
 The Sentinel Command Line Interface (CLI) allows you to apply and test Sentinel policies including those that use mocks generated from Terraform Cloud plans.
 
+> Note: To install the latest version of the Sentinel CLI perform the following steps:
+
+```shell
+mkdir -p /workstation/terraform/sentinel && cd $_
+curl -sfLo "sentinel.zip" "https://releases.hashicorp.com/sentinel/0.18.4/sentinel_0.18.4_linux_amd64.zip"
+unzip -qq "sentinel.zip"
+sudo mv "sentinel" "/usr/local/bin/sentinel"
+sudo chmod +x "/usr/local/bin/sentinel"
+rm -rf "sentinel.zip"
+```
+
 Let's start with some basic Sentinel commands, running them in the "Sentinel CLI" tab on the left.
 
 Check the version of Sentinel running on your machine:
@@ -53,6 +64,11 @@ The Sentinel "apply" command lets you evaluate Sentinel policies: https://docs.h
 The Sentinel "test" command lets you test a Sentinel policy against multiple test cases: https://docs.hashicorp.com/sentinel/commands/test
 
 Both commands use Sentinel CLI configuration files: https://docs.hashicorp.com/sentinel/commands/config
+
+```shell
+cd /workstation/terraform/sentinel
+touch require-even-number.sentinel
+```
 
 `require-even-number.sentinel`
 
