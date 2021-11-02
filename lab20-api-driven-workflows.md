@@ -21,7 +21,7 @@ Clone the terraform-guides repo and change to the `automation-script` directory
 ```
 cd /workstation/terraform
 git clone https://github.com/hashicorp/terraform-guides.git
-cd /terraform-guides/operations/automation-script
+cd ./terraform-guides/operations/automation-script
 ```
 
 This directory contains several scripts that utlize the Terraform Cloud API to showcase automation interactions with Terraform cloud. The `loadandRunWorkspace-python.sh` script clones a git repository, creates a workspace (if it does not already exist), uploads a Terraform configuration to it, sets variables in it, triggers a run, checks the results of Sentinel policy checks, and even does an apply against the workspace if permitted. If an apply is done, the script waits for it to finish and then downloads the apply log and the before and after state files. If an apply cannot be done, it downloads the plan log instead.
