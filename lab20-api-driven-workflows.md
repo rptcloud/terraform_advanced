@@ -11,6 +11,7 @@ Duration: 20 minutes
 - Task 5: Validate the corresponding API calls to Terraform Cloud.
 - Task 6: Update the Terraform code version of your Workspace
 - Task 7: Review Workspace API
+- Task 8: Delete the Workspace via API
 
 ## Task 1: Clone the terraform-guides repository
 
@@ -59,6 +60,11 @@ Execute an API call to return the workspaces details for any given workspace:
 ```
 curl -s --header "Authorization: Bearer $TFE_TOKEN" --header "Content-Type: application/vnd.api+json" "https://app.terraform.io/api/v2/organizations/$TFE_ORG/workspaces/workspace-from-api" | jq
 ```
+
+## Task 8: Delete the Workspace via API
+
+1. Run `./deleteWorkspace.sh` to delete the workspace created via API.
+
 
 ## Reference
 
