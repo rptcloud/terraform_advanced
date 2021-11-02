@@ -1,19 +1,17 @@
 # Lab: Automate TFC/TFE Workspace Creation
 
 We can Provision Terraform Cloud or Terraform Enterprise - with Terraform! The Terraform provider allows for the management of organizations, workspaces, teams, variables, run triggers, policy sets, and more.
-​
-​Duration: 15 minutes
+
+Duration: 15 minutes
 
 - Task 1: Read information from TFC/TFE with the Terraform tfe provider
 - Task 2: Create a TFC/TFE Workspace using the tfe provider
 - Task 3: Set Variables within a TFE Workspace
 - Task 4: Update the Terraform Version of a Workspace
 - Task 5: Automate Team Access across Workspaces
-  ​
 
 ## Task 1: Read information from TFC/TFE with the Terraform tfe provider
 
-​
 Create a new directory for the lab and add the following `main.tf`.
 
 ```shell
@@ -21,7 +19,6 @@ mkdir -p /workstation/terraform/workspace_automation && cd $_
 touch main.tf
 ```
 
-​
 `main.tf`
 
 ```hcl
