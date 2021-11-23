@@ -198,9 +198,7 @@ terraform apply
 
 You can now variablize the operating system of your server by creating the definintion within the `main.tf` of your root module and the variable decleration within TFC.  Also update the `module` block to reference this variable.
 
-`variables.tf`
-
-```hcl
+```hcl main.tf
 variable "server_os" {
   type        = string
   description = "Server Operating System"
