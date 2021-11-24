@@ -42,7 +42,7 @@ resource "aws_security_group" "main" {
 
 ## Task 2: Look at the state without a dynamic block
 
-Run a `terraform apply` followed by a `terraform state list` to view how the security groups are accounted for in Terraform's State.
+Run a `terraform apply` followed by a `terraform state show aws_security_group.main` to view how the security groups are accounted for in Terraform's State.
 
 ```bash
 terraform apply
@@ -131,7 +131,7 @@ resource "aws_security_group" "main" {
 
 ## Task 4: Look at the state with a dynamic block
 
-Run a `terraform apply` followed by a `terraform state list` to view how the securty groups are accounted for in Terraform's State.
+Run a `terraform apply` followed by a `terraform state show aws_security_group.main` to view how the securty groups are accounted for in Terraform's State.
 
 ```bash
 terraform apply
@@ -231,7 +231,7 @@ resource "aws_security_group" "main" {
 
 ## Task 6: Look at the state with a dynamic block using Terraform map
 
-Run a `terraform apply` followed by a `terraform state list` to view how the security groups are accounted for in Terraform's State.
+Run a `terraform apply` followed by a `terraform state show aws_security_group.main` to view how the security groups are accounted for in Terraform's State.
 
 ```bash
 terraform apply
