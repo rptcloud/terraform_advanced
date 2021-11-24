@@ -51,7 +51,7 @@ If these values are commented out (they are by default), make sure you uncomment
 
 Create a new folder within the `/workstation/terraform/testing_lab/server` folder called `test`. This will house your test for the server module.
 
-In the `test` folder, create a file ending in server_test.go and run tests with the go test command. E.g., go test server_test.go.
+In the `test` folder, create a file ending in server_test.go
 
 `server_test.go`
 
