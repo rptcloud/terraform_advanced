@@ -112,7 +112,7 @@ You will see that when using the `count` parameter you have very limited control
 
 ## Task 4: Refactor code to use Terraform `for-each`
 
-Refactor `main.tf` to make use of the `for-each` command rather then the count command. Replace the existing code in your `main.tf` with the following and comment out the `output` blocks for now.
+Refactor `main.tf` to make use of the `for-each` command rather then the count command. Replace the following **relevant code blocks** in you existing code of your `main.tf` with the following and comment out the `output` blocks for now.
 
 ```hcl
 locals {
