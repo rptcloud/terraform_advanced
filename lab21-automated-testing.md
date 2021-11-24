@@ -110,6 +110,24 @@ func TestEnvironment(t *testing.T) {
 }
 ```
 
+At the end of this task you should have a file layout similar to the following:
+
+```shell
+.
+├── assets
+│   ├── setup-web.sh
+│   ├── webapp
+│   └── webapp.service
+├── main.tf
+├── outputs.tf
+├── server
+│   ├── server.tf
+│   └── test
+│       └── server_test.go
+├── terraform.tfvars
+└── variables.tf
+```
+
 ## Task 2:  Use Terratest to Deploy infrastructure
 We will use Terratest to execute terraform to deploy our infrastructure into AWS.
 
