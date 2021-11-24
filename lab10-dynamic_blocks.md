@@ -97,6 +97,8 @@ resource "aws_security_group" "main" {
 
 Replace the contents of `securitygroups.tf` with the following configuration:
 
+**NOTE: replace the `###` `name = "core-sg-###"` with your initials.**
+
 ```hcl
 locals {
   ingress_rules = [{
@@ -111,7 +113,7 @@ locals {
 }
 
 resource "aws_security_group" "main" {
-  name   = "core-sg"
+  name = "core-sg-###"
 
   dynamic "ingress" {
     for_each = local.ingress_rules
@@ -183,6 +185,8 @@ resource "aws_security_group" "main" {
 
 Replace the contents of `securitygroups.tf` with the following configuration:
 
+**NOTE: replace the `###` `name = "core-sg-###"` with your initials.**
+
 ```hcl
 variable "web_ingress" {
   type = map(object(
@@ -210,7 +214,7 @@ variable "web_ingress" {
 }
 
 resource "aws_security_group" "main" {
-  name = "core-sg"
+  name = "core-sg-###"
 
   dynamic "ingress" {
     for_each = var.web_ingress
