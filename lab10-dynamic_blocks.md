@@ -15,9 +15,11 @@ A dynamic block acts much like a for expression, but produces nested blocks inst
 
 Create a new file in the root directory `/workstation/terraform` called `securitygroups.tf` with the following configuration.
 
+**NOTE: replace the `###` `name = "core-sg-###"` with your initials.**
+
 ```hcl
 resource "aws_security_group" "main" {
-  name = "core-sg"
+  name = "core-sg-###"
   # vpc_id = data.aws_vpc.main.id
 
   ingress {
