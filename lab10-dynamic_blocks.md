@@ -95,7 +95,7 @@ resource "aws_security_group" "main" {
 
 ## Task 3: Convert Security Group to use dynamic block
 
-Replace the contents of `securitygroups.tf` with the following configuration:
+Replace all of the contents of `securitygroups.tf` with the following configuration:
 
 **NOTE: replace the `###` `name = "core-sg-###"` with your initials.**
 
@@ -183,7 +183,7 @@ resource "aws_security_group" "main" {
 
 ## Task 5: Use a dynamic block with Terraform map
 
-Replace the contents of `securitygroups.tf` with the following configuration:
+Replace all of the contents of `securitygroups.tf` with the following configuration:
 
 **NOTE: replace the `###` `name = "core-sg-###"` with your initials.**
 
