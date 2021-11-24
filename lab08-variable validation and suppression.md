@@ -25,6 +25,14 @@ variable "server_os" {
 }
 ```
 
+Update the `server_os` variable in Terraform Cloud to list an unapproved server operating system and perform a `terraform plan`: 
+
+![Approved Server OS](./img/server_os_unapproved.png)
+
+```bash
+terraform plan
+```
+
 Update the `server_os` variable in Terraform Cloud to list an approved server operating system and perform a `terraform plan`:
 
 ![Approved Server OS](./img/server_os_approved.png)
@@ -34,13 +42,7 @@ Update the `server_os` variable in Terraform Cloud to list an approved server op
 terraform plan
 ```
 
-Update the `server_os` variable in Terraform Cloud to list an approved server operating system and perform a `terraform plan`: 
 
-![Approved Server OS](./img/server_os_unapproved.png)
-
-```bash
-terraform plan
-```
 
 ```bash
 Initializing Terraform configuration...
