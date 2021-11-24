@@ -111,7 +111,61 @@ Navigate to your "webserver-aws-dev" workspace and queue a plan.
 
 ### Review the Plan
 
-Will see the plan was successful but there was a policy failure, however the option to Apply is still available. Why is that?
+Will see the plan was successful along with a pass with the policy.  This is because we are setting the required size and tags correctly inside our module.  This is the benefit of using approved private modules that are in accordance with our security policies.
+
+### Update the Sentinel Policy to require a `Bogus` tag.
+
+Update the Sentinel Policy to now make the `Bogus` tag mandatory.  This is something our server module doesn't account for.
+
+```hcl
+   
+# Imports mock data
+import "tfplan/v2" as tfplan
+
+# Get all AWS instances from all modules
+ec2_instances = filter tfplan.resource_changes as _, rc {
+    rc.type is "aws_instance" and
+        (rc.change.actions contains "create" or rc.change.actions is ["update"])
+}
+
+# Mandatory Instance Tags
+mandatory_tags = [
+    "Name",
+    "Bogus",
+]
+
+# Allowed Types
+allowed_types = [
+    "t2.micro",
+    "t2.small",
+    "t2.medium",
+]
+
+# Rule to enforce "Name" tag on all instances
+mandatory_instance_tags = rule {
+    all ec2_instances as _, instance {
+        all mandatory_tags as mt {
+            instance.change.after.tags contains mt
+        }
+    }
+}
+
+# Rule to restrict instance types
+instance_type_allowed = rule {
+    all ec2_instances as _, instance {
+        instance.change.after.instance_type in allowed_types
+    }
+}
+
+# Main rule that requires other rules to be true
+main = rule {
+    (instance_type_allowed and mandatory_instance_tags) else true
+}
+```
+
+### Review the Plan
+
+Will see the plan was successful, but there was a policy failure, however the option to Apply is still available. Why is that?
 
 ![](img/sentinel-advisory.png)
 
